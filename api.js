@@ -34,9 +34,9 @@ app.use("/", function (req, res) {
     console.log("Thank you for making a request");
     res.status(200).send("Hello from server");
 })
-
-app.listen(3000, function () {
-    console.log("Server started on port 3000")
+const PORT=process.env.PORT||3000;
+app.listen(PORT, function () {
+    console.log(`Server started on port ${PORT}`)
 })
 
 
